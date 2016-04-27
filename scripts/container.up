@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# if dependencies have not been initialized before, do it now
+if [ ! -e /inf/initialized ]; then
+  init.deps
+fi
+
+# if microservice config not present, use default config from repo
+if [ ! -e /app/configs/microservices.js ]; then 
+  echo "----- using default microservice configuration"
+  cp /app/configs/microservices.sample.js /app/configs/microservices.js
+fi
+
+# start app
+echo "----- starting SlideWiki"
+cd /app
+npm run dev 

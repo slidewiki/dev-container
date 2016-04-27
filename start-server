@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ $(docker ps --filter "name=swdev" | grep swdev | wc -l) = 1 ]; then
+  echo "Restarting already existing container swdev"
+  docker restart swdev
+else
+  docker run --name swdev -it -v $1:/app -p 3000:3000 swdev
+fi

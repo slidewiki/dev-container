@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "----- Installing dependencies"
+cd /app
+bower install --allow-root
+npm install
+
+touch /inf/initialized
