@@ -1,5 +1,5 @@
 # SlideWiki Platform Development Container
-This Docker container bundles everything that is needed to run the SlideWiki Platform. The actual code of the app is mounted into the container for the host system.
+This is a Docker container for developers that bundles everything that is needed to run the SlideWiki Platform. The actual code of the app is mounted into the container for the host system.
 
 ## Usage
 The easiest way to run the development container is via the provided shell script:
