@@ -12,7 +12,7 @@ Note: When the container was started before you can ommit the path because the p
 The development container is named `swdev`. You can use the usual `docker` commands to control the container:
 ```
 docker stop swdev
-docker restatr swdev
+docker restart swdev
 ```
 
 ### The `node_modules` directory
