@@ -16,4 +16,4 @@ docker restart swdev
 ```
 
 ### The `node_modules` directory
-When the container is first initialized `npm` is started to install the dependencies. This creates the `node_modules` directory inside your SlideWiki project directory. Because the container is run by the Docker daemon the `node_modules` directory is owned by `root`. You need to use `sduo` to remove this directory. 
+When the container is first initialized `npm` is started to install the dependencies. This creates the `node_modules` directory inside your SlideWiki project directory. Because the container is run by the Docker daemon the `node_modules` directory is owned by `root`. You need to use `sudo` to remove this directory. 
