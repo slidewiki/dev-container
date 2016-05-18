@@ -1,4 +1,4 @@
-FROM node:5.11-slim
+FROM node:6.0-slim
 
 RUN npm install bower -g
 RUN npm install webpack -g
@@ -12,4 +12,4 @@ WORKDIR /app
 EXPOSE 3000
 VOLUME /app
 
-CMD ["container.up"]    # instead of ENTRYPOINT so use can call alternate command
+CMD ["container.up"]    # instead of ENTRYPOINT so user can call alternate command
