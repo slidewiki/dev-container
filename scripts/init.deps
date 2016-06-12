@@ -1,8 +1,8 @@
 #!/bin/bash
 
 echo "----- Installing dependencies"
-cd /app
+cd /nodeApp
 bower install --allow-root
-npm install
+npm install 
 
 touch /inf/initialized

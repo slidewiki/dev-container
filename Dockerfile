@@ -1,15 +1,9 @@
-FROM node:6.0-slim
-
-RUN npm install bower -g
-RUN npm install webpack -g
+FROM slidewiki/runtime:latest
 
 ADD scripts /bin
-
 RUN mkdir /inf
-RUN mkdir /app
-WORKDIR /app
 
-EXPOSE 3000
-VOLUME /app
+WORKDIR /nodeApp
+VOLUME /nodeApp
 
 CMD ["container.up"]    # instead of ENTRYPOINT so user can call alternate command

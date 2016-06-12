@@ -4,5 +4,5 @@ if [ $(docker ps --filter "name=swdev" | grep swdev | wc -l) = 1 ]; then
   echo "Restarting already existing container swdev"
   docker restart swdev
 else
-  docker run --name swdev -it -v $1:/app -p 3000:3000 bwulff/slidewiki-devserver
+  docker run --name swdev -it -v $1:/nodeApp -p 3000:3000 slidewiki/devserver:latest
 fi

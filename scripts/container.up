@@ -6,14 +6,13 @@ if [ ! -e /inf/initialized ]; then
 fi
 
 # if microservice config not present, use default config from repo
-if [ ! -e /app/configs/microservices.js ]; then 
+if [ ! -e /nodeApp/configs/microservices.js ]; then
   echo "----- using default microservice configuration"
-  cp /app/configs/microservices.sample.js /app/configs/microservices.js
+  cp /nodeApp/configs/microservices.sample.js /nodeApp/configs/microservices.js
 fi
 
 # start app
 echo "----- starting SlideWiki"
-cd /app
-
+cd /nodeApp
 export HOST="0.0.0.0"
-npm run dev 
+npm run dev
